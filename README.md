@@ -1,2 +1,2 @@
-# AlgariaWaddya
+# Soul Collector
 Game in development
