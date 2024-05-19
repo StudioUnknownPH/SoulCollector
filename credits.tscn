@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbjr2j6cj08cb"]
+
+[ext_resource type="Texture2D" uid="uid://cq4lm3uegcjs4" path="res://MenuASSet/A2/dark0001.png" id="1_3no60"]
+[ext_resource type="Script" path="res://credits.gd" id="1_t8n7y"]
+[ext_resource type="Texture2D" uid="uid://db0t7q4odm4sb" path="res://MenuASSet/A1/icon.png" id="2_y7yk0"]
+[ext_resource type="Texture2D" uid="uid://b3n247wsewpec" path="res://MenuASSet/A1/Untitled-10002.png" id="4_egw5f"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t8n7y")
+
+[node name="Dark0001" type="Sprite2D" parent="."]
+position = Vector2(1296.25, 751.5)
+scale = Vector2(1.99375, 2.04058)
+texture = ExtResource("1_3no60")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1321, 582)
+scale = Vector2(1.17016, 1.17016)
+texture = ExtResource("2_y7yk0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 1059.0
+offset_right = 1718.0
+offset_bottom = 1373.0
+
+[node name="play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+icon = ExtResource("4_egw5f")
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]

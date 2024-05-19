@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://chut1emue0ng2"]
+
+[ext_resource type="Texture2D" uid="uid://byl2f238w1wd4" path="res://MenuASSet/A3/world1.png" id="2_s20rc"]
+[ext_resource type="Texture2D" uid="uid://covi5gl8r4pue" path="res://BETA/NPC/ARON/NPC.png" id="3_4cq0q"]
+[ext_resource type="Texture2D" uid="uid://d1p3horpg7fvk" path="res://icon.svg" id="3_nb0x5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2y48"]
+size = Vector2(2851.63, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mp2e1"]
+size = Vector2(127.504, 129.732)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yiix"]
+size = Vector2(135, 248)
+
+[node name="game" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1421, 1279)
+scale = Vector2(2.61488, 1.9458)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-7.25, -284.5)
+texture = ExtResource("2_s20rc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(16.9375, -1)
+shape = SubResource("RectangleShape2D_f2y48")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(-138, 168)
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(396, 320)
+texture = ExtResource("3_nb0x5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(396.363, 320.5)
+scale = Vector2(1.01388, 0.994354)
+shape = SubResource("RectangleShape2D_mp2e1")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(-287, 93)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+position = Vector2(899.41, 338.529)
+scale = Vector2(0.525039, 0.525039)
+texture = ExtResource("3_4cq0q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(884.5, 193)
+shape = SubResource("RectangleShape2D_8yiix")

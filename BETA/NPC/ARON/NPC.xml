@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="NPC.png">
+	<!-- Created with Adobe Animate version 16.0.1.119 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Aron instance 10000" x="0" y="0" width="408" height="548" pivotX="202.4" pivotY="264.7"/>
+</TextureAtlas>

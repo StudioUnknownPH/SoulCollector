@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ksqfnol1pcnm"
+path="res://.godot/imported/Leap into Eternity (Live Orchestra).wav-a4febbd762c9d3e1d4ff8e14d0a768f4.sample"
+
+[deps]
+
+source_file="res://MenuASSet/A1/Leap into Eternity (Live Orchestra).wav"
+dest_files=["res://.godot/imported/Leap into Eternity (Live Orchestra).wav-a4febbd762c9d3e1d4ff8e14d0a768f4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
