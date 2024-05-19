@@ -1,4 +1,9 @@
 # Soul Collector
 Game in development
 
-ONLY USE THE SOUL COLLECTOR!!!
+DEVELOPERS
+Felonia
+KyleAcosta
+x40arcade
+kurt
+
