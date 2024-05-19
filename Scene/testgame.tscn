@@ -1,55 +1,123 @@
-[gd_scene load_steps=7 format=3 uid="uid://chut1emue0ng2"]
+[gd_scene load_steps=17 format=3 uid="uid://chut1emue0ng2"]
 
-[ext_resource type="Texture2D" uid="uid://byl2f238w1wd4" path="res://MenuASSet/A3/world1.png" id="2_s20rc"]
+[ext_resource type="Texture2D" uid="uid://fdovqb6ulatq" path="res://BETA/worldplaceholder/betas.png" id="2_04vv7"]
 [ext_resource type="Texture2D" uid="uid://covi5gl8r4pue" path="res://BETA/NPC/ARON/NPC.png" id="3_4cq0q"]
-[ext_resource type="Texture2D" uid="uid://d1p3horpg7fvk" path="res://icon.svg" id="3_nb0x5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2y48"]
-size = Vector2(2851.63, 103)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mp2e1"]
-size = Vector2(127.504, 129.732)
+[ext_resource type="Texture2D" uid="uid://c8bqk5d02l5q" path="res://BETA/worldplaceholder/star.png" id="3_qkq6f"]
+[ext_resource type="Texture2D" uid="uid://dddcocys415wh" path="res://BETA/worldplaceholder/rocks.png" id="4_hsdsy"]
+[ext_resource type="Texture2D" uid="uid://b6i7d073aulj6" path="res://BETA/worldplaceholder/ground.png" id="5_p4xmf"]
+[ext_resource type="Texture2D" uid="uid://flbu6x0lnau5" path="res://BETA/worldplaceholder/smoke0001.png" id="6_lordo"]
+[ext_resource type="Texture2D" uid="uid://cjmiusf5u4hvg" path="res://BETA/worldplaceholder/smoke0002.png" id="7_8vv1x"]
+[ext_resource type="Texture2D" uid="uid://blyaj7g6bebcn" path="res://BETA/worldplaceholder/smoke0003.png" id="8_dyaq2"]
+[ext_resource type="Texture2D" uid="uid://c28flp7n1q7md" path="res://BETA/worldplaceholder/weirdassstatue.png" id="9_qmoya"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="10_aqgix"]
+[ext_resource type="Script" path="res://addons/virtual_joystick/test/player.gd" id="12_3c80s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8yiix"]
 size = Vector2(135, 248)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w54qy"]
+size = Vector2(3135, 181)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1qed"]
+size = Vector2(324, 906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrecj"]
+size = Vector2(147, 278)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kws3t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_lordo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8vv1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dyaq2")
+}],
+"loop": true,
+"name": &"smoke",
+"speed": 5.0
+}]
+
 [node name="game" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1421, 1279)
-scale = Vector2(2.61488, 1.9458)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-7.25, -284.5)
-texture = ExtResource("2_s20rc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(16.9375, -1)
-shape = SubResource("RectangleShape2D_f2y48")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(-138, 168)
-metadata/_edit_group_ = true
-
-[node name="Icon" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(396, 320)
-texture = ExtResource("3_nb0x5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(396.363, 320.5)
-scale = Vector2(1.01388, 0.994354)
-shape = SubResource("RectangleShape2D_mp2e1")
-
-[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+[node name="betaplayer" type="RigidBody2D" parent="."]
 position = Vector2(-287, 93)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="betaplayer"]
 position = Vector2(899.41, 338.529)
 scale = Vector2(0.525039, 0.525039)
 texture = ExtResource("3_4cq0q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="betaplayer"]
 position = Vector2(884.5, 193)
 shape = SubResource("RectangleShape2D_8yiix")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Betas" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1284, 734)
+texture = ExtResource("2_04vv7")
+
+[node name="Star" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1298, 758)
+texture = ExtResource("3_qkq6f")
+
+[node name="Rocks" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1323, 653)
+texture = ExtResource("4_hsdsy")
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1303, 720)
+texture = ExtResource("5_p4xmf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1395.5, 1276.5)
+shape = SubResource("RectangleShape2D_w54qy")
+
+[node name="Weirdassstatue" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1294, 741)
+scale = Vector2(0.884817, 0.884817)
+texture = ExtResource("9_qmoya")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1831, 895)
+shape = SubResource("RectangleShape2D_p1qed")
+
+[node name="Test" type="Node2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="Test"]
+
+[node name="Virtual joystick left" parent="Test/UI" instance=ExtResource("10_aqgix")]
+offset_left = -52.0
+offset_top = -631.0
+offset_right = 248.0
+offset_bottom = -331.0
+scale = Vector2(2.29504, 2.29504)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Test"]
+position = Vector2(152, -163)
+metadata/_edit_group_ = true
+
+[node name="Player" type="Sprite2D" parent="Test/RigidBody2D" node_paths=PackedStringArray("joystick_left", "joystick_right")]
+position = Vector2(690, 1166)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_4cq0q")
+script = ExtResource("12_3c80s")
+joystick_left = NodePath("../../UI/Virtual joystick left")
+joystick_right = NodePath("")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Test/RigidBody2D"]
+position = Vector2(668.5, 998)
+shape = SubResource("RectangleShape2D_xrecj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1476, 1175)
+scale = Vector2(1.23691, 1.23691)
+sprite_frames = SubResource("SpriteFrames_kws3t")
+animation = &"smoke"
+autoplay = "smoke"
+frame_progress = 0.671851
