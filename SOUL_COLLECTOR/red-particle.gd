@@ -1,2 +1,0 @@
-extends AnimatedSprite2D
-
